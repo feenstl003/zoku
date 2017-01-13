@@ -1,0 +1,14 @@
+.event-container{
+  text-align: center;
+  width: 10em;
+  height: 10em;
+}
+.event-img{
+  border-radius: 50%;
+  border: solid;
+  overflow: hidden;
+}
+.event-container img{
+  width: 100%;
+  height: auto;
+}
