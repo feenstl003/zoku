@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Zoku Inspire</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <script type="text/javascript" src="//platform.linkedin.com/in.js">
+        api_key: [86nd7nabyk2cpj]
+        onLoad: [ONLOAD]
+        authorize: [AUTHORIZE]
+        lang: [LANG_LOCALE]
+    </script>
+</head>
+
+<body>
+
+    <div class="row">
+        <div class="twelve columns menu">
+
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">HOME</a>
+                <a href="#">FIND MY RESERVATIONS</a>
+                <a href="#">ZOKU INSPIRE</a>
+                <a href="#">FAQ</a>
+                <a href="#">CONTACT US</a>
+                <a href="#">PROFILE SETTINGS</a>
+                <a href="#">SIGN IN</a>
+            </div>
+
+            <span onclick="openNav()"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></span>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="one-half column" style="margin-top: 25%">
+                <h4>Login with LinkedIn</h4>
+                <script type="in/Login"></script>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
+    <script type="text/javascript" src="//platform.linkedin.com/in.js">
+        api_key: 86nd7nabyk2cpj
+        authorize: true
+        onLoad: onLinkedInLoad
+    </script>
+
+    <script type="text/javascript">
+        // Setup an event listener to make an API call once auth is complete
+        function onLinkedInLoad() {
+            IN.Event.on(IN, "auth", getProfileData);
+        }
+
+        // Handle the successful return from the API call
+        function onSuccess(data) {
+            console.log(data);
+        }
+
+        // Handle an error response from the API call
+        function onError(error) {
+            console.log(error);
+        }
+
+        // Use the API call wrapper to request the member's basic profile data
+        function getProfileData() {
+            IN.API.Raw("/people/~").result(onSuccess).error(onError);
+        }
+    </script>
+
+</body>
+
+</html>
