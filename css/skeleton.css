@@ -166,7 +166,7 @@ body {
     /* currently ems cause chrome bug misinterpreting rems on body element */
     line-height: 1.6;
     font-weight: 400;
-    font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Open Sans", "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #222;
 }
 
@@ -257,6 +257,7 @@ h6 {
     margin-top: 0;
     margin-bottom: 2rem;
     font-weight: 300;
+    font-family: "varela_roundregular", "Open Sans", sans-serif;
 }
 h1 {
     font-size: 4.0rem;
@@ -320,9 +321,36 @@ p {
 
 a {
     color: #1EAEDB;
+    font-family: "varela_roundregular", "Open Sans", sans-serif;
 }
 a:hover {
     color: #0FA0CE;
+}
+
+.workshop {
+    border-top: #6C7A89 solid 1px;
+    margin: 5px;
+}
+
+body > div.container > div > div > div:nth-child(1) {
+    border-top: none;
+}
+
+.workshop a {
+    padding: 8px 8px 8px 0px;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1em;
+    color: #FFF;
+    display: block;
+    background-color: #ee5250;
+    margin-bottom: 10%;
+}
+
+.workshop h1 {
+    margin-top: 10%;
+    text-transform: uppercase;
 }
 
 /* Buttons
