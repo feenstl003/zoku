@@ -328,7 +328,7 @@ a:hover {
 }
 
 .workshop {
-    border-top: #000 solid 1px;
+    border-top: #6C7A89 solid 1px;
     margin: 5px;
 }
 
@@ -345,11 +345,11 @@ body > div.container > div > div > div:nth-child(1) {
     color: #FFF;
     display: block;
     background-color: #ee5250;
-    margin-bottom: 5%;
+    margin-bottom: 10%;
 }
 
 .workshop h1 {
-    margin-top: 5%;
+    margin-top: 10%;
     text-transform: uppercase;
 }
 
