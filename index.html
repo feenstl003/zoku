@@ -8,37 +8,48 @@
     <meta name="author" content="Misja, Elton, Lotte">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Fonts -->
     <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-
+    <link rel="stylesheet" href="css/fonts/stylesheet.css">
+    <!-- Icons -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- Styles -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/skeleton.css">
-    <link rel="stylesheet" href="css/fonts/stylesheet.css">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/zoku.css">
 
     <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 
 <body>
 
-    <div class="row">
+    <div class="header row">
         <div class="twelve columns menu">
 
-            <div id="mySidenav" class="sidenav">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a href="#"><span><i class="fa fa-home"></i> HOME</span></a>
+            <!-- Hidden navmenu -->
+            <div class="">
+              <div id="mySidenav" class="sidenav closed">
+                <a href="javascript:void(0)" class="closebtn">&times;</a>
+                <a href="/"><span><i class="fa fa-home"></i> HOME</span></a>
                 <a href="#"><span><i class="fa fa-search"></i> FIND MY RESERVATIONS</span></a>
                 <a href="#"><span><i class="fa fa-home"></i> ZOKU INSPIRE</span></a>
-                <a href="#"><span><i class="fa fa-faq"></i> FAQ</span></a>
-                <a href="#"><span><i class="fa fa-contact"></i> CONTACT US</span></a>
-                <a href="#"><span><i class="fa fa-profile"></i> PROFILE SETTINGS</span></a>
+                <a href="#"><span><i class=""></i> FAQ</span></a>
+                <a href="#"><span><i class=""></i> CONTACT US</span></a>
+                <a href="profile.html"><span><i class="fa fa-user"></i> PROFILE SETTINGS</span></a>
+                <a href="big-screen.html"><span><i class="fa fa-expand"></i> TEMP LINK TO BIGGER SCREEN</span></a>
+              </div>
+
+              <span class="openbtn"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></span>
             </div>
 
-            <span onclick="openNav()"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></span>
+            <!-- Logo -->
+            <div class="logo"><img src="images/logo-white.svg" alt="Zoku"></div>
+
         </div>
     </div>
 
-    <div class="container">
+    <div class="body container">
         <div class="row">
             <div class="one-half column" style="margin-top: 25%">
                 <h4>Basic Page</h4>
@@ -47,17 +58,7 @@
         </div>
     </div>
 
-    <script>
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-        }
-
-        /* Set the width of the side navigation to 0 */
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-        }
-    </script>
-
+    <script src="js/zoku.js"></script>
 </body>
 
 </html>

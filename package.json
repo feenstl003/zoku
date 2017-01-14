@@ -1,0 +1,19 @@
+{
+  "name": "zoku",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "python -m SimpleHTTPServer"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/feenstl003/zoku.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/feenstl003/zoku/issues"
+  },
+  "homepage": "https://github.com/feenstl003/zoku#readme"
+}

@@ -5,95 +5,92 @@
     <meta charset="utf-8">
     <title>Zoku Inspire</title>
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Misja, Elton, Lotte">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Fonts -->
     <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-
+    <link rel="stylesheet" href="css/fonts/stylesheet.css">
+    <!-- Icons -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- Styles -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/skeleton.css">
-    <link rel="stylesheet" href="css/fonts/stylesheet.css">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/zoku.css">
 
     <link rel="icon" type="image/png" href="images/favicon.png">
 
+    <!-- linkedin -->
     <script type="text/javascript" src="//platform.linkedin.com/in.js">
-        api_key: [86nd7nabyk2cpj]
-        onLoad: [ONLOAD]
-        authorize: [AUTHORIZE]
-        lang: [LANG_LOCALE]
+        api_key: 86tmt7563zfu01
+        onLoad: onLinkedInLoad
+        authorize: true
     </script>
+    <script type="text/javascript">
+        // Setup an event listener to make an API call once auth is complete
+        function onLinkedInLoad() {
+            IN.Event.on(IN, "auth", onLinkedInAuth);
+        }
+
+        function onLinkedInAuth(){
+          IN.API.Profile("me").result(displayProfiles)
+        }
+
+        function displayProfiles(profiles){
+          member = profiles.values[0];
+          console.log(member);
+          document.getElementById('profiles').innerHTML = `
+          <img src='${member.pictureUrl}' alt='${member.firstName}'/>
+          <p id='${member.id}'>Hello ${member.firstName} ${member.lastName}</p>
+          <a href='https://www.linkedin.com/in/${member.firstName.toLowerCase()}-${member.lastName.toLowerCase().replace(/ /, "-")}-${member.id}'>View profile(not working yet)</a>`
+        }
+
+    </script>
+
 </head>
 
 <body>
 
-    <div class="row">
+    <div class="header row">
         <div class="twelve columns menu">
 
-            <div id="mySidenav" class="sidenav">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a href="#">HOME</a>
-                <a href="#">FIND MY RESERVATIONS</a>
-                <a href="#">ZOKU INSPIRE</a>
-                <a href="#">FAQ</a>
-                <a href="#">CONTACT US</a>
-                <a href="#">PROFILE SETTINGS</a>
-                <a href="#">SIGN IN</a>
+            <!-- Hidden navmenu -->
+            <div class="">
+              <div id="mySidenav" class="sidenav closed">
+                <a href="javascript:void(0)" class="closebtn">&times;</a>
+                <a href="/"><span><i class="fa fa-home"></i> HOME</span></a>
+                <a href="#"><span><i class="fa fa-search"></i> FIND MY RESERVATIONS</span></a>
+                <a href="#"><span><i class="fa fa-home"></i> ZOKU INSPIRE</span></a>
+                <a href="#"><span><i class=""></i> FAQ</span></a>
+                <a href="#"><span><i class=""></i> CONTACT US</span></a>
+                <a href="profile.html"><span><i class="fa fa-user"></i> PROFILE SETTINGS</span></a>
+                <a href="big-screen.html"><span><i class="fa fa-expand"></i> TEMP LINK TO BIGGER SCREEN</span></a>
+              </div>
+
+              <span class="openbtn"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></span>
             </div>
 
-            <span onclick="openNav()"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></span>
+            <!-- Logo -->
+            <div class="logo"><img src="images/logo-white.svg" alt="Zoku"></div>
+
         </div>
     </div>
 
-    <div class="container">
+    <!-- Content -->
+    <div class="body container">
         <div class="row">
             <div class="one-half column" style="margin-top: 25%">
                 <h4>Login with LinkedIn</h4>
-                <script type="in/Login"></script>
+                <script type="IN/Login"></script>
+                <div id="profiles"></div>
             </div>
         </div>
     </div>
 
-    <script>
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-        }
 
-        /* Set the width of the side navigation to 0 */
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-        }
-    </script>
 
-    <script type="text/javascript" src="//platform.linkedin.com/in.js">
-        api_key: 86nd7nabyk2cpj
-        authorize: true
-        onLoad: onLinkedInLoad
-    </script>
-
-    <script type="text/javascript">
-        // Setup an event listener to make an API call once auth is complete
-        function onLinkedInLoad() {
-            IN.Event.on(IN, "auth", getProfileData);
-        }
-
-        // Handle the successful return from the API call
-        function onSuccess(data) {
-            console.log(data);
-        }
-
-        // Handle an error response from the API call
-        function onError(error) {
-            console.log(error);
-        }
-
-        // Use the API call wrapper to request the member's basic profile data
-        function getProfileData() {
-            IN.API.Raw("/people/~").result(onSuccess).error(onError);
-        }
-    </script>
-
+    <script src="js/zoku.js"></script>
 </body>
 
 </html>

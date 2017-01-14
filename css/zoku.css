@@ -1,0 +1,29 @@
+
+/*Nav*/
+.logo{
+  text-align: center;
+  vertical-align: middle;
+  flex-grow: 2
+}
+.menu{
+  padding: 3em;
+  display: flex;
+  justify-content: space-between;
+}
+.sidenav{
+  background-color: rgba(0,0,0,0.85)
+}
+@media (max-width: 700px) {
+  .menu{
+    padding: 2em
+  }
+}
+.open{
+  left: 0px ;
+}
+
+.closed{
+  left: -250px
+}
+
+/*Content*/
