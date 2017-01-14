@@ -160,10 +160,20 @@
 
 html {
     font-size: 62.5%;
+    background-color: darkgray;
 }
+.index {
+    background: url(img/background-zoku.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 body {
     font-size: 1.5em;
     /* currently ems cause chrome bug misinterpreting rems on body element */
+    
     line-height: 1.6;
     font-weight: 400;
     font-family: "Open Sans", "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -172,7 +182,6 @@ body {
 
 /* Menu
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 .menu {
     background-color: #292929;
 }
@@ -181,19 +190,26 @@ body {
 .sidenav {
     height: 100%;
     /* 100% Full-height */
+    
     width: 250px;
     /* 0 width - change this with JavaScript */
+    
     position: fixed;
     /* Stay in place */
+    
     z-index: 1;
     /* Stay on top */
+    
     top: 0;
     background-color: lightgray;
     /* Black*/
+    
     overflow-x: hidden;
     /* Disable horizontal scroll */
+    
     padding-top: 60px;
     /* Place content 60px from the top */
+    
     transition: 0.5s;
     /* 0.5 second transition effect to slide in the sidenav */
 }
@@ -238,7 +254,6 @@ body {
         font-size: 18px;
     }
 }
-
 .fa-bars {
     margin: 5%;
     color: #FFF;
@@ -246,7 +261,6 @@ body {
 
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 h1,
 h2,
 h3,
@@ -290,7 +304,6 @@ h6 {
 }
 
 /* Larger than phablet */
-
 @media (min-width: 550px) {
     h1 {
         font-size: 5.0rem;
@@ -317,24 +330,21 @@ p {
 
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 a {
-    color: #1EAEDB;
+    color: #FFF;
     font-family: "varela_roundregular", "Open Sans", sans-serif;
+    text-decoration: none;
 }
 a:hover {
-    color: #0FA0CE;
+    color: #FFF;
 }
-
 .workshop {
     border-top: #6C7A89 solid 1px;
     margin: 5px;
 }
-
 body > div.container > div > div > div:nth-child(1) {
     border-top: none;
 }
-
 .workshop a {
     padding: 8px 8px 8px 0px;
     text-decoration: none;
@@ -346,7 +356,6 @@ body > div.container > div > div > div:nth-child(1) {
     background-color: #ee5250;
     margin-bottom: 10%;
 }
-
 .workshop h1 {
     margin-top: 10%;
     text-transform: uppercase;
@@ -354,7 +363,6 @@ body > div.container > div > div > div:nth-child(1) {
 
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 .button,
 button,
 input[type="submit"],
@@ -418,7 +426,6 @@ input[type="button"].button-primary:focus {
 
 /* Forms
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 input[type="email"],
 input[type="number"],
 input[type="search"],
@@ -431,6 +438,7 @@ select {
     height: 38px;
     padding: 6px 10px;
     /* The 6px vertically centers text on FF, ignored by Webkit */
+    
     background-color: #fff;
     border: 1px solid #D1D1D1;
     border-radius: 4px;
@@ -439,7 +447,6 @@ select {
 }
 
 /* Removes awkward default styles on some inputs for iOS */
-
 input[type="email"],
 input[type="number"],
 input[type="search"],
@@ -491,7 +498,6 @@ label > .label-body {
 
 /* Lists
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 ul {
     list-style: circle inside;
 }
@@ -516,7 +522,6 @@ li {
 
 /* Code
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 code {
     padding: .2rem .5rem;
     margin: 0 .2rem;
@@ -534,7 +539,6 @@ pre > code {
 
 /* Tables
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 th,
 td {
     padding: 12px 15px;
@@ -552,7 +556,6 @@ td:last-child {
 
 /* Spacing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 button,
 .button {
     margin-bottom: 1rem;
@@ -577,7 +580,6 @@ form {
 
 /* Utilities
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 .u-full-width {
     width: 100%;
     box-sizing: border-box;
@@ -595,7 +597,6 @@ form {
 
 /* Misc
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 hr {
     margin-top: 3rem;
     margin-bottom: 3.5rem;
@@ -606,9 +607,7 @@ hr {
 /* Clearing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-
 /* Self Clearing Goodness */
-
 .container:after,
 .row:after,
 .u-cf {
@@ -620,7 +619,6 @@ hr {
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-
 /*
 Note: The best way to structure the use of media queries is to create the queries
 near the relevant code. For example, if you wanted to change the styles for buttons
@@ -628,23 +626,17 @@ on small devices, paste the mobile query code up in the buttons section and styl
 there.
 */
 
-
 /* Larger than mobile */
-
 @media (min-width: 400px) {}
 
 /* Larger than phablet (also point when grid becomes active) */
-
 @media (min-width: 550px) {}
 
 /* Larger than tablet */
-
 @media (min-width: 750px) {}
 
 /* Larger than desktop */
-
 @media (min-width: 1000px) {}
 
 /* Larger than Desktop HD */
-
 @media (min-width: 1200px) {}
