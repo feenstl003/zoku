@@ -356,7 +356,8 @@ body > div.container > div > div > div:nth-child(1) {
     background-color: #ee5250;
     margin-bottom: 10%;
 }
-.workshop h1 {
+.workshop h2 {
+    font-size: 2.2em !important;
     margin-top: 10%;
     text-transform: uppercase;
 }
@@ -386,7 +387,6 @@ input[type="button"] {
     cursor: pointer;
     box-sizing: border-box;
     position: relative;
-    margin-top: 40%;
 }
 .button:hover,
 button:hover,
