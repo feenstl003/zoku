@@ -399,19 +399,7 @@ input[type="button"] {
     box-sizing: border-box;
     position: relative;
 }
-.button:hover,
-button:hover,
-input[type="submit"]:hover,
-input[type="reset"]:hover,
-input[type="button"]:hover,
-.button:focus,
-button:focus,
-input[type="submit"]:focus,
-input[type="reset"]:focus,
-input[type="button"]:focus {
-    color: #ee5250;
-    outline: 0;
-}
+
 .button.button-primary,
 button.button-primary,
 input[type="submit"].button-primary,

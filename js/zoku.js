@@ -26,17 +26,17 @@ navOpen.addEventListener("click", function(){
 if (joinButton) {
   var msg = `
   <div>
-    <div class="container">
-    <p>Please confirm that you will attend the following workshop</p>
+    <div style="text-align:left" class="container">
+    <h4>Please confirm that you will attend the following workshop</h4>
       <section style="text-align:left">
-        <h5>WORKSHOP HOW TO SPEAK IN PUBLIC</h5>
+        <h5>WORKSHOP CODING</h5>
         <h6>DATE EN TIME</h6>
         <p>zo, 22 jan. 2017, 16:00 CET</p>
+        <hr>
         <h6>DATUM EN TIJD</h6>
-        <a href="#">Add to calendar</a>
         <p>zo, 22 jan. 2017, 16:00 CET</p>
-      </section>
-      <section>
+        <a style="color:#EE5250" href="#">Add to calendar</a>
+        <hr>
         <h6>LOCATION</h6>
         <p>Zoku Lounge</p>
       </section>
@@ -62,16 +62,13 @@ if (!joinButton) {
     <div>
       <img style="height: 14em" src="/images/coding.jpg"/>
       <p>Inspired by all these workshops? Why not create your own?</p>
-      <ol>
-        <li>Go to the digital screen in the Living Room at Zoku.</li>
-        <li>Tap on the workshop you like the most and click to <strong>join</strong>.</li>
-        <li>Last but not least, think about your talents. Maybe someday others can <strong>join</strong> you in a workshop you create yourself.</li>
-      </ol>
     </div>`
 
 
     alertify
       .okBtn("CREATE A WORKSHOP")
-      .alert(msg)
+      .confirm(msg, ()=>{
+        alertify.success("A event has been created")
+      })
   }, 10000)
 }

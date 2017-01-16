@@ -27,3 +27,11 @@
 }
 
 /*Content*/
+
+
+/*Buttons*/
+button.ok{
+  background: #EE5250 !important;
+  color: white !important;
+  font-weight: lighter;
+}
