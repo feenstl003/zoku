@@ -256,6 +256,17 @@ body {
     color: #FFF;
 }
 
+.advertisement {
+    color: #FFF;
+    text-align: center;
+    background-color: #354C68;
+    padding: 5px;
+}
+
+.advertisement p {
+    margin: 0;
+    padding: 0;
+}
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -577,7 +588,6 @@ blockquote,
 dl,
 figure,
 table,
-p,
 ul,
 ol,
 form {
