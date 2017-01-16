@@ -24,12 +24,33 @@ navOpen.addEventListener("click", function(){
 })
 
 if (joinButton) {
+  var msg = `
+  <div>
+    <div class="container">
+    <p>Please confirm that you will attend the following workshop</p>
+      <section style="text-align:left">
+        <h5>WORKSHOP HOW TO SPEAK IN PUBLIC</h5>
+        <h6>DATE EN TIME</h6>
+        <p>zo, 22 jan. 2017, 16:00 CET</p>
+        <h6>DATUM EN TIJD</h6>
+        <a href="#">Add to calendar</a>
+        <p>zo, 22 jan. 2017, 16:00 CET</p>
+      </section>
+      <section>
+        <h6>LOCATION</h6>
+        <p>Zoku Lounge</p>
+      </section>
+    </div>
+  </div>`
+
+
   joinButton.addEventListener("click", ()=>{
     // confirm dialog
-    alertify.confirm("Message", function () {
-      alertify.success("You've clicked OK and typed")
+    alertify
+    .okBtn("ATTEND")
+    .confirm(msg, function () {
+      alertify.success("A seat has been reserved")
     }, function() {
-      alertify.error("You've clicked Cancel and typed")
     });
   } )
 }
@@ -39,7 +60,7 @@ if (!joinButton) {
 
     var msg = `
     <div>
-      <img style="height: 15em" src="/images/coding.jpg"/>
+      <img style="height: 14em" src="/images/coding.jpg"/>
       <p>Inspired by all these workshops? Why not create your own?</p>
       <ol>
         <li>Go to the digital screen in the Living Room at Zoku.</li>
