@@ -24,18 +24,19 @@ navOpen.addEventListener("click", function(){
   sideMenu.classList.add("open")
 })
 
-formHeaderUpload.addEventListener("change", function () {
-      var reader = new FileReader();
+if (formHeaderUpload) {
+  formHeaderUpload.addEventListener("change", function () {
+    var reader = new FileReader();
 
-      reader.onload = function (e) {
-          // get loaded data and render thumbnail.
-          document.getElementById("placeholder-img").src = e.target.result;
-      };
+    reader.onload = function (e) {
+      // get loaded data and render thumbnail.
+      document.getElementById("placeholder-img").src = e.target.result;
+    };
 
-      console.log(this);
-      // read the image file as a data URL.
-      reader.readAsDataURL(this.files[0]);
-    })
+    // read the image file as a data URL.
+    reader.readAsDataURL(this.files[0]);
+  })
+}
 
 
 
