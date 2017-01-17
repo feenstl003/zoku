@@ -387,7 +387,7 @@ input[type="button"] {
     padding: 0 40px;
     color: #FFF;
     text-align: center;
-    font-size: 11px;
+    font-size: 1.1em;
     font-weight: 600;
     line-height: 38px;
     letter-spacing: .1rem;
@@ -398,13 +398,14 @@ input[type="button"] {
     cursor: pointer;
     box-sizing: border-box;
     position: relative;
+    border: none;
 }
 
 .button.button-primary,
 button.button-primary,
 input[type="submit"].button-primary,
 input[type="reset"].button-primary,
-input[type="button"].button-primary {
+input[type="button"].button-primary) {
     color: #FFF;
     background-color: #33C3F0;
     border-color: #33C3F0;
@@ -430,6 +431,8 @@ input[type="button"].button-primary:focus {
 input[type="email"],
 input[type="number"],
 input[type="search"],
+input[type="date"],
+input[type="time"],
 input[type="text"],
 input[type="tel"],
 input[type="url"],
@@ -444,6 +447,7 @@ select {
     border-radius: 4px;
     box-shadow: none;
     box-sizing: border-box;
+    width: 100%
 }
 
 /* Removes awkward default styles on some inputs for iOS */

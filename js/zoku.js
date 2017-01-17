@@ -3,6 +3,7 @@ var navOpen = document.querySelector(".openbtn")
 var sideMenu = document.getElementById("mySidenav")
 var main = document.querySelector("div.body")
 var joinButton = document.getElementById('join-button')
+var formHeaderUpload = document.querySelector(".header-img.placeholder #workshop-header")
 
 /* Set the width of the side navigation to 0 */
 navClose.addEventListener("click", function(){
@@ -23,16 +24,28 @@ navOpen.addEventListener("click", function(){
   sideMenu.classList.add("open")
 })
 
+formHeaderUpload.addEventListener("change", function () {
+      var reader = new FileReader();
+
+      reader.onload = function (e) {
+          // get loaded data and render thumbnail.
+          document.getElementById("placeholder-img").src = e.target.result;
+      };
+
+      console.log(this);
+      // read the image file as a data URL.
+      reader.readAsDataURL(this.files[0]);
+    })
+
+
+
 if (joinButton) {
   var msg = `
-  <div>
     <div style="text-align:left" class="container">
-    <h4>Please confirm that you will attend the following workshop</h4>
+      <h4>Please confirm that you will attend the following workshop</h4>
       <section style="text-align:left">
-        <h5>WORKSHOP CODING</h5>
-        <h6>DATE EN TIME</h6>
-        <p>zo, 22 jan. 2017, 16:00 CET</p>
         <hr>
+        <h5>WORKSHOP CODING</h5>
         <h6>DATUM EN TIJD</h6>
         <p>zo, 22 jan. 2017, 16:00 CET</p>
         <a style="color:#EE5250" href="#">Add to calendar</a>
@@ -40,8 +53,7 @@ if (joinButton) {
         <h6>LOCATION</h6>
         <p>Zoku Lounge</p>
       </section>
-    </div>
-  </div>`
+    </div>`
 
 
   joinButton.addEventListener("click", ()=>{
@@ -60,13 +72,13 @@ if (!joinButton) {
 
     var msg = `
     <div>
-      <img style="height: 14em" src="/images/coding.jpg"/>
+      <img style="height: 13em; width:100%" src="/images/coding.jpg"/>
       <p>Inspired by all these workshops? Why not create your own?</p>
     </div>`
 
 
     alertify
-      .okBtn("CREATE A WORKSHOP")
+      .okBtn(`<a href="create-workshop.html">CREATE A WORKSHOP</a>`)
       .confirm(msg, ()=>{
         alertify.success("A event has been created")
       })

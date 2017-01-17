@@ -30,8 +30,38 @@
 
 
 /*Buttons*/
-button.ok{
+.alertify button{
+  width: auto;
+}
+.alertify button.ok{
   background: #EE5250 !important;
   color: white !important;
   font-weight: lighter;
 }
+
+
+/*-----Form----*/
+label.header-img.placeholder{
+  height: 38px;
+  background-color: #fff;
+  border: 1px solid #D1D1D1;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box;
+  width: 100%;
+  height: 10em;
+  overflow: hidden;
+}
+label.header-img.placeholder img{
+  width: 100%;
+  height: auto;
+}
+input[type="file"]{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #fff;
+  text-align: center;
+  visibility: hidden;
+}
+/*---------*/
