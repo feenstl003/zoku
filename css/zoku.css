@@ -65,3 +65,14 @@ input[type="file"]{
   visibility: hidden;
 }
 /*---------*/
+/*-----Profile----*/
+.create-events{
+    background-color: #e3e3e3;
+    padding: 10px;
+    border-radius: 5px
+}
+.create-events .metaData{
+    display: block;
+    text-align: right;
+}
+/*---------*/
