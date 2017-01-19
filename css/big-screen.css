@@ -3,12 +3,18 @@
   width: 10em;
   height: 10em;
 }
-.event-img{
-  border-radius: 50%;
-  border: solid;
-  overflow: hidden;
-}
+
 .event-container img{
   width: 100%;
   height: auto;
+}
+
+h5, button {
+    font-family: "varela_roundregular", "Open Sans", sans-serif;
+    text-transform: uppercase;
+}
+
+button {
+    font-weight: 100;
+    font-size: .9em;
 }
