@@ -21,7 +21,7 @@ if (submit) {
 }
 
 
-if (localStorage.length > 0 && window.location.pathname == "/profile.html") {
+if (localStorage.length > 0 && (window.location.pathname == "/profile.html" || window.location.pathname == "/zokuinspire/profile.html")) {
     // console.log(contentPlaceholder);
         addElement(localStorage)
 
