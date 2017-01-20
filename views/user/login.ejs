@@ -1,0 +1,28 @@
+<% include ../partials/header %>
+
+<!-- Content -->
+<div class="body container">
+    <div class="row">
+        <div id="profiles" class="one-half column" style="margin-top: 25%">
+            <h4>Login</h4>
+            <form class="login" method="post">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" placeholder="Username" required/>
+
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Password" required/>
+
+                <input type="submit" id="login" class="button" value="Login"/>
+            </form>
+            <!-- <script type="IN/Login"></script> -->
+            <a href="user/new">Create an account</a>
+        </div>
+        <div class="one-half column eventList" style="margin-top: 25%"></div>
+    </div>
+</div>
+
+
+
+<!-- <script src="js/formInput.js"></script> -->
+
+<% include ../partials/footer %>

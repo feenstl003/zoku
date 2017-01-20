@@ -1,0 +1,33 @@
+<% include ../partials/header %>
+
+<div class="body container">
+    <div class="row">
+        <div class="one-half column" style="margin-top: 10%">
+            <h4 style="text-transform: uppercase;">Create an account</h4>
+            <form class="workshop-form">
+              <div class="row">
+                <div class="seven columns">
+
+                  <label for="user-firstname">First name</label>
+                  <input type="text" name="user-firstname" id="user-firstname" placeholder="John" required/>
+
+                  <label for="user-surname">Last name</label>
+                  <input type="text" name="user-surname" id="user-surname" placeholder="Doe" required/>
+
+                  <label for="user-email">Email</label>
+                  <input type="email" name="user-email" id="user-email" placeholder="email@email.com" required/>
+
+                  <label for="user-password">Password</label>
+                  <input type="password" name="user-password" id="user-password" placeholder="password" required/>
+
+                  <input type="submit" id="add-user" class="button" value="Create"/>
+                </div>
+              </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<script src="js/create-account.js"></script>
+<% include ../partials/footer %>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Zoku Inspire</title>
+    <meta name="description" content="">
+    <meta name="author" content="Misja, Elton, Lotte">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/fonts/stylesheet.css">
+    <!-- Icons -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/zoku.css">
+
+    <!-- linkedin -->
+    <script type="text/javascript" src="//platform.linkedin.com/in.js">
+        api_key: 86tmt7563zfu01
+        onLoad: onLinkedInLoad
+        authorize: true
+    </script>
+    <script type="text/javascript">
+        // Setup an event listener to make an API call once auth is complete
+        function onLinkedInLoad() {
+            IN.Event.on(IN, "auth", onLinkedInAuth);
+        }
+
+        function onLinkedInAuth(){
+          IN.API.Profile("me").result(displayProfiles)
+        }
+
+        function displayProfiles(profiles){
+          member = profiles.values[0];
+          console.log(member);
+          document.getElementById('profiles').innerHTML = `
+          <img src='${member.pictureUrl}' alt='${member.firstName}'/>
+          <p id='${member.id}'>Hello ${member.firstName} ${member.lastName}</p>
+          <a href='https://www.linkedin.com/in/${member.firstName.toLowerCase()}-${member.lastName.toLowerCase().replace(/ /, "-")}-${member.id}'>View profile(not working yet)</a>`
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <div class="body container">
+        <div class="row">
+            <div class="one-half column" style="margin-top: 10%">
+                <h4 style="text-transform: uppercase;">Create an account</h4>
+                <form class="workshop-form">
+                  <div class="row">
+                    <div class="seven columns">
+
+                      <label for="user-firstname">First name</label>
+                      <input type="text" name="user-firstname" id="user-firstname" placeholder="John" required/>
+
+                      <label for="user-surname">Last name</label>
+                      <input type="text" name="user-surname" id="user-surname" placeholder="Doe" required/>
+
+                      <label for="user-email">Email</label>
+                      <input type="email" name="user-email" id="user-email" placeholder="email@email.com" required/>
+
+                      <label for="user-password">Password</label>
+                      <input type="password" name="user-password" id="user-password" placeholder="password" required/>
+
+                      <input type="submit" id="add-user" class="button" value="Create"/>
+                    </div>
+                  </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/zoku.js"></script>
+    <script src="js/create-account.js"></script>
+</body>
+
+</html>
