@@ -1,19 +1,28 @@
-.event-container{
-  text-align: center;
-  width: 10em;
-  height: 10em;
+.event-container {
+    text-align: center;
+    width: 10em;
+    height: 10em;
 }
-
-.event-container img{
-  width: 100%;
-  height: auto;
+.event-container img {
+    width: 100%;
+    height: auto;
 }
-
-h5, button {
+p {
+    font-family: "varela_roundregular", "Open Sans", sans-serif !important;
+}
+div.event-info > p {
+    text-align: right;
+    font-size: 0.9em;
+}
+h5 {
+    text-align: left;
+    margin-bottom: 0;
+}
+h5,
+button {
     font-family: "varela_roundregular", "Open Sans", sans-serif;
     text-transform: uppercase;
 }
-
 button {
     font-weight: 100;
     font-size: .9em;
