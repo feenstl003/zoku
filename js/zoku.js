@@ -79,7 +79,7 @@ if (!joinButton) {
 
 
     alertify
-      .okBtn(`<a href="create-workshop.html">CREATE A WORKSHOP</a>`)
+      .okBtn(`<a href="create-workshop.html">CREATE WORKSHOP</a>`)
       .confirm(msg, ()=>{
         alertify.success("A event has been created")
       })
