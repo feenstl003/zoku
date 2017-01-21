@@ -95,5 +95,19 @@ input[type="file"]{
 
 
 /*----userlist----*/
+.user{
+    display: block;
+    height: 100%;
+    margin-bottom: 10em
+}
+.event-info{
+    margin-bottom: 4em
+}
+.user .event-info h5{
+    text-align: center;
+}
+.row span{
+    margin-left: 1em
+}
 
 /*---------*/

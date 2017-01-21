@@ -6,23 +6,28 @@ var joinButton = document.getElementById('join-button')
 var formHeaderUpload = document.querySelector(".header-img.placeholder #workshop-header")
 
 /* Set the width of the side navigation to 0 */
-navClose.addEventListener("click", function(){
-    sideMenu.classList.remove("open")
-    sideMenu.classList.add("closed")
+if (navClose) {
+    navClose.addEventListener("click", function(){
+        sideMenu.classList.remove("open")
+        sideMenu.classList.add("closed")
 
-})
+    })
+}
 /* Set the width of the side navigation to 0 */
-main.addEventListener("click", function(){
-    sideMenu.classList.remove("open")
-    sideMenu.classList.add("closed")
+if (main) {
+    main.addEventListener("click", function(){
+        sideMenu.classList.remove("open")
+        sideMenu.classList.add("closed")
 
-})
+    })
+}
 
-/* Set the width of the side navigation to 0 */
-navOpen.addEventListener("click", function(){
-  sideMenu.classList.remove("closed")
-  sideMenu.classList.add("open")
-})
+if (navOpen) {
+    navOpen.addEventListener("click", function(){
+        sideMenu.classList.remove("closed")
+        sideMenu.classList.add("open")
+    })
+}
 
 if (formHeaderUpload) {
   formHeaderUpload.addEventListener("change", function () {
@@ -73,7 +78,7 @@ if (!joinButton) {
 
     var msg = `
     <div>
-      <img style="height: 13em; width:100%" src="/images/coding.jpg"/>
+      <img style="height: 13em; width:100%" src="images/coding.jpg"/>
       <p>Inspired by all these workshops? Why not create your own?</p>
     </div>`
 
