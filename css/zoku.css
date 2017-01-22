@@ -66,6 +66,9 @@ input[type="file"]{
 }
 /*---------*/
 /*-----Profile----*/
+#profiles{
+    text-align: center;
+}
 .create-events{
     background-color: #e3e3e3;
     padding: 10px;
@@ -77,11 +80,11 @@ input[type="file"]{
 }
 .profile-img{
     border-radius: 50%;
+    text-align: center;
     border: solid #ee5250;
 }
 .profile-headline{
-    width: 12em;
-    float: right;
+    text-align: center;
     margin: 1em;
 }
 .form-link{
@@ -90,6 +93,25 @@ input[type="file"]{
 .IN-widget{
     display: block;
     width:100%;
+}
+
+.workshop-toggle{}
+.workshop-toggle .small-btn{
+    width: 49%;
+    background-color: #ee5250;
+    border: solid #ee5250;
+    padding: 0;
+    line-height: normal;
+}
+.hidden{
+    display: none
+}
+.btn-inactive{
+    box-sizing: border-box;
+    background-color: white !important;
+    color: #ee5250 !important;
+    border: solid #ee5250
+
 }
 /*---------*/
 
