@@ -113,6 +113,14 @@ input[type="file"]{
     border: solid #ee5250
 
 }
+
+.suggestion{
+    margin-top: 3em;
+    background-color: #e3e3e3;
+    padding: 1em;
+    text-align: left;
+    color: #999
+}
 /*---------*/
 
 
@@ -128,8 +136,19 @@ input[type="file"]{
 .user .event-info h5{
     text-align: center;
 }
-.row span{
+.user .row span{
     margin-left: 1em
 }
 
 /*---------*/
+
+
+/*--Workshops--*/
+img + .metaData{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 2em;
+    color: #888
+}
+/*-------------*/

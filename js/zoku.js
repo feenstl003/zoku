@@ -52,7 +52,7 @@ if (joinButton) {
       <section style="text-align:left">
         <hr>
         <h5>WORKSHOP CODING</h5>
-        <h6>DATUM EN TIJD</h6>
+        <h6>DATE AND TIME</h6>
         <p>zo, 22 jan. 2017, 16:00 CET</p>
         <a style="color:#EE5250" href="#">Add to calendar</a>
         <hr>
@@ -89,4 +89,17 @@ if (!joinButton) {
         alertify.success("A event has been created")
       })
   }, 10000)
+}
+
+
+if(window.location.pathname == "/join.html" || window.location.pathname == "/zokuinspire/join.html"){
+
+    function showLocation() {
+        var msg = `
+        <div>
+          <img style="width:100%" src="images/map.jpg"/>
+        </div>`
+        alertify.alert(msg, function() {}, 'popup1');
+
+    }
 }
