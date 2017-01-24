@@ -40,27 +40,33 @@
     <link rel="stylesheet" href="css/zoku.css">
 
     <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <script src="https://rawgithub.com/fabien-d/alertify.js/0.3.10/src/alertify.js"></script>
 </head>
 
 <body>
-        <div class="header row">
+
+    	<div class="header row">
             <div class="twelve columns menu">
 
-                <!-- Hidden navmenu -->
-                <div class="">
-                    <div id="mySidenav" class="sidenav closed">
-                        <a href="javascript:void(0)" class="closebtn">&times;</a>
-                        <a href="index.html"><span><i class="fa fa-home"></i> HOME</span></a>
-                        <a href="#"><span><i class="fa fa-search"></i> FIND MY RESERVATIONS</span></a>
-                        <a href="workshops.html"><span><i class="fa fa-home"></i> ZOKU INSPIRE</span></a>
-                        <a href="#"><span><i class=""></i> FAQ</span></a>
-                        <a href="#"><span><i class=""></i> CONTACT US</span></a>
-                        <a href="profile.html"><span><i class="fa fa-user"></i> PROFILE SETTINGS</span></a>
-                        <a href="big-screen.html"><span><i class="fa fa-expand"></i> TEMP LINK TO BIGGER SCREEN</span></a>
-                    </div>
-
-                    <span class="openbtn"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></span>
+              <!-- Hidden navmenu -->
+              <div class="">
+                <div id="mySidenav" class="sidenav closed">
+                  <a href="javascript:void(0)" class="closebtn">&times;</a>
+                  <a href="index.html"><span><i class="fa fa-home"></i> HOME</span></a>
+                  <a href="#"><span><i class="fa fa-search"></i> FIND MY RESERVATIONS</span></a>
+                  <a href="workshops.html"><span><i class="fa fa-star-o"></i> ZOKU INSPIRE</span></a>
+    			  <a href="profile.html"><span><i class="fa fa-user"></i> PROFILE</span></a>
+                  <a href="#"><span><i class="fa fa-question"></i> FAQ</span></a>
+                  <a href="#"><span><i class="fa fa-envelope-o"></i> CONTACT US</span></a>
+    			  <hr>
+    			  <a> Verwijderen later</a>
+                  <a href="big-screen.html"><span><i class="fa fa-expand"></i> LINK TO BIGGER SCREEN</span></a>
+                  <a href="visitors.html"><span><i class="fa fa-expand"></i> VISITORS</span></a>
                 </div>
+
+                <span class="openbtn"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></span>
+              </div>
 
                 <!-- Logo -->
                 <div class="logo"><img src="images/logo-white.svg" alt="Zoku"></div>
@@ -68,13 +74,14 @@
             </div>
         </div>
 
+
         <div class="body container">
             <div class="row">
                 <div class="one-half column" style="margin-top: 10%">
                     <h4 style="text-transform: uppercase;">How to join</h4>
-                    <p>When the web was new, design and structure were all mixed up together. Eventually we realised this was very messy, so we invented CSS and separated design from HTML. Everyone felt much better after this, and went and had a cup of tea.</p>
+                    <p>Zoku has a special place where you can join this workshop. You will meet & greet all the people who will attend this workshop. This wil also be the place to get more information about this workshop.</p>
                     <ol>
-                        <li>Go to the digital screen in the Living Room at Zoku.</li>
+                        <li>Go to the digital screen in the Living Room at Zoku. <a id="map" style="width:5em; color:#bd5054" onclick="showLocation()">Where?</a></li>
                         <li>Tap on the workshop you like the most and click to <strong>join</strong>.</li>
                         <li>Last but not least, think about your talents. Maybe someday others can <strong>join</strong> you in a workshop you create yourself.</li>
                     </ol>
@@ -85,6 +92,7 @@
         </div>
 
         <script src="js/alertify.js"></script>
+        <script src="https://rawgithub.com/fabien-d/alertify.js/0.3.10/src/alertify.js"></script>
         <script src="js/zoku.js"></script>
     </body>
 

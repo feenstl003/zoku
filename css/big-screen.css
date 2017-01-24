@@ -1,3 +1,11 @@
+/*------General----------*/
+body.screensaver .event-container{
+    margin-bottom: 10em !important
+}
+h5 {
+    text-align: left;
+    margin-bottom: 0;
+}
 .event-container {
     text-align: center;
     width: 10em;
@@ -7,23 +15,161 @@
     width: 100%;
     height: auto;
 }
-p {
-    font-family: "varela_roundregular", "Open Sans", sans-serif !important;
-}
 div.event-info > p {
     text-align: right;
     font-size: 0.9em;
 }
-h5 {
-    text-align: left;
-    margin-bottom: 0;
+/*-------------------------*/
+
+
+/*--------Typography--------*/
+p {
+    font-family: "varela_roundregular", "Open Sans", sans-serif !important;
 }
+
 h5,
 button {
     font-family: "varela_roundregular", "Open Sans", sans-serif;
     text-transform: uppercase;
 }
+/*-------------------------*/
+
+
+/*------Buttons---------*/
 button {
     font-weight: 100;
     font-size: .9em;
 }
+/*-------------------------*/
+
+
+/*------Colors---------*/
+
+body.screensaver{
+    background: black;
+    -webkit-animation: fadein 2s ease-in; /* Safari, Chrome and Opera > 12.1 */
+        -moz-animation: fadein 2s ease-in; /* Firefox < 16 */
+         -ms-animation: fadein 2s ease-in; /* Internet Explorer */
+          -o-animation: fadein 2s ease-in; /* Opera < 12.1 */
+             animation: fadein 2s ease-in;
+ }
+
+ @keyframes fadein {
+     from { opacity: 0; background: white}
+     to   { opacity: 1; background: black}
+ }
+
+ /* Firefox < 16 */
+ @-moz-keyframes fadein {
+     from { opacity: 0; background: white}
+     to   { opacity: 1; background: black}
+ }
+
+ /* Safari, Chrome and Opera > 12.1 */
+ @-webkit-keyframes fadein {
+     from { opacity: 0; background: white}
+     to   { opacity: 1; background: black}
+ }
+
+ /* Internet Explorer */
+ @-ms-keyframes fadein {
+     from { opacity: 0; background: white}
+     to   { opacity: 1; background: black}
+ }
+
+ /* Opera < 12.1 */
+ @-o-keyframes fadein {
+     from { opacity: 0; background: white}
+     to   { opacity: 1; background: black}
+ }
+
+body.screensaver *{
+    color: white
+}
+/*-------------------------*/
+
+
+/*------Clock---------*/
+.clock {
+  border-radius: 50%;
+  background: url(../images/clock.svg) no-repeat center;
+  background-size: 88%;
+  height: 20em;
+  padding-bottom: 31%;
+  position: relative;
+  width: 20em;
+  position: fixed;
+  right: 10%;
+  top: 0
+}
+
+.clock.simple:after {
+  background: #000;
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 5%;
+  height: 5%;
+  z-index: 10;
+}
+
+.minutes-container, .hours-container, .seconds-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.hours-container {
+  animation: rotate 43200s infinite steps(60);
+}
+.minutes-container {
+  animation: rotate 3600s infinite steps(60);
+}
+.seconds-container {
+  animation: rotate 60s infinite steps(60);
+}
+
+.hours {
+  background: white;
+  height: 15%;
+  left: 48.75%;
+  position: absolute;
+  top: 35%;
+  transform-origin: 50% 100%;
+  width: 2%;
+  border-radius: 24px
+}
+
+.minutes {
+  background: white;
+  height: 20%;
+  left: 49%;
+  position: absolute;
+  top: 30%;
+  transform-origin: 50% 100%;
+  width: 2%;
+  border-radius: 24px
+}
+
+.seconds {
+  background: #ee5250;
+  height: 25%;
+  left: 50%;
+  position: absolute;
+  top: 26%;
+  transform-origin: 50% 100%;
+  width: 1%;
+  z-index: 8;
+  border-radius: 50%
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+/*-------------------------*/

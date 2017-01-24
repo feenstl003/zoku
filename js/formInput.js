@@ -75,6 +75,13 @@ function addElement (storedEvent) {
 
 function displayProfiles(profiles){
     console.log(profiles);
+    var attendBtn = document.getElementById('attended-btn')
+    var hostedBtn = document.getElementById('hosted-btn')
+    var attendCont = document.querySelectorAll('.attended');
+    var hostCont = document.querySelectorAll('.hosted');
+    var {username} = profiles
+
+
     if (profiles.values) {
         member = profiles.values[0];
         console.log(member);
@@ -83,7 +90,44 @@ function displayProfiles(profiles){
         <img class="profile-img" src='${member.pictureUrl}' alt='${member.firstName}'/>
         <div class="profile-headline">
         <p>${member.headline}</p>
+        <small>Zoku guest since November 2016</small>
         </div>
+        <div style="margin-top: 20%" class="workshop-toggle">
+            <h4>Workshops</h4>
+
+            <div class="row user-content">
+                <div class="buttons">
+                    <a href="create-workshop.html"><button style="background-color: #354C68; margin-bottom:10%;">Create workshop</button></a>
+                    <button class="small-btn" id="attended-btn" type="button" name="button">Attending (2)</button>
+                    <button class="small-btn btn-inactive" id="hosted-btn" type="button" name="button">Hosted (1)</button>
+
+                </div>
+                    <div class="twelve columns">
+
+                        <div class="workshop attended">
+                            <h5>Workshop Coding</h5>
+                            <img src="images/coding.jpg" style="width: 100%; margin-bottom: 3%;">
+                            <p>31 Januari 2017</p>
+                            <a href="workshop.html">View</a>
+                        </div>
+
+                        <div class="workshop hosted hidden">
+                            <h5>Workshop How to Speak in Public</h5>
+                            <img src="images/speaking.jpg" style="width: 100%; margin-bottom: 3%;">
+                            <p><span style="color: #ee5250">Attended:</span> 12 December 2016</p>
+                            <a href="workshop.html">View</a>
+                        </div>
+
+                        <div class="workshop attended">
+                            <h5>Workshop Tech & Money</h5>
+                            <img src="images/tech.jpg" style="width: 100%; margin-bottom: 3%;">
+                            <p><span style="color: #ee5250">Attended:</span> 21 November 2016</p>
+                            <a href="workshop.html">View</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         `
     }else{
         var {username} = profiles
@@ -92,9 +136,82 @@ function displayProfiles(profiles){
         <h4 id='${username.value}'>Hello ${username.value}</h4>
         <img style="width:80px; height:80px" class="profile-img" src='./images/user-placeholder.png' alt='no-image'/>
         <div class="profile-headline">
+            <small>Zoku guest since November 2016</small>
         </div>
+        <div style="margin-top: 20%" class="workshop-toggle">
+            <h4>Workshops</h4>
+
+            <div class="row user-content">
+                <div class="buttons">
+                    <a href="create-workshop.html"><button style="background-color: #354C68; margin-bottom:10%;">Create workshop</button></a>
+                    <button class="small-btn" id="attended-btn" type="button" name="button">Attending (2)</button>
+                    <button class="small-btn btn-inactive" id="hosted-btn" type="button" name="button">Hosted (1)</button>
+
+                </div>
+                    <div class="twelve columns">
+
+                        <div class="workshop attended">
+                            <h5>Workshop Coding</h5>
+                            <img src="images/coding.jpg" style="width: 100%; margin-bottom: 3%;">
+                            <p>31 Januari 2017</p>
+                            <a href="workshop.html">View</a>
+                        </div>
+
+                        <div class="workshop hosted hidden">
+                            <h5>Workshop How to Speak in Public</h5>
+                            <img src="images/speaking.jpg" style="width: 100%; margin-bottom: 3%;">
+                            <p><span style="color: #ee5250">Attended:</span> 12 December 2016</p>
+                            <a href="workshop.html">View</a>
+                        </div>
+
+                        <div class="workshop attended">
+                            <h5>Workshop Tech & Money</h5>
+                            <img src="images/tech.jpg" style="width: 100%; margin-bottom: 3%;">
+                            <p><span style="color: #ee5250">Attended:</span> 21 November 2016</p>
+                            <a href="workshop.html">View</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         `
     }
+    var attendBtn = document.getElementById('attended-btn')
+    var hostedBtn = document.getElementById('hosted-btn')
+    var attendCont = document.querySelectorAll('.attended');
+    var hostCont = document.querySelectorAll('.hosted');
+
+    attendBtn.addEventListener("click",()=>{
+        console.log(hostedBtn.classList)
+        if (attendBtn.classList.contains("btn-inactive")) {
+            attendBtn.classList.remove("btn-inactive")
+            hostedBtn.classList.add("btn-inactive")
+        }
+
+        // attendBtn.classList.toggle("btn-inactive")
+        for (var i = 0; i < attendCont.length; i++) {
+            attendCont[i].classList.remove("hidden")
+        }
+        for (var i = 0; i < hostCont.length; i++) {
+            hostCont[i].classList.add("hidden")
+        }
+    })
+
+    hostedBtn.addEventListener("click",()=>{
+        if (hostedBtn.classList.contains("btn-inactive")) {
+            hostedBtn.classList.remove("btn-inactive")
+            attendBtn.classList.add("btn-inactive")
+        }
+
+        // hostedBtn.classList.toggle("btn-inactive")
+        for (var i = 0; i < hostCont.length; i++) {
+            hostCont[i].classList.remove("hidden")
+        }
+        for (var i = 0; i < attendCont.length; i++) {
+            attendCont[i].classList.add("hidden")
+        }
+    })
+
 }
 
 if(login){

@@ -6,23 +6,28 @@ var joinButton = document.getElementById('join-button')
 var formHeaderUpload = document.querySelector(".header-img.placeholder #workshop-header")
 
 /* Set the width of the side navigation to 0 */
-navClose.addEventListener("click", function(){
-    sideMenu.classList.remove("open")
-    sideMenu.classList.add("closed")
+if (navClose) {
+    navClose.addEventListener("click", function(){
+        sideMenu.classList.remove("open")
+        sideMenu.classList.add("closed")
 
-})
+    })
+}
 /* Set the width of the side navigation to 0 */
-main.addEventListener("click", function(){
-    sideMenu.classList.remove("open")
-    sideMenu.classList.add("closed")
+if (main) {
+    main.addEventListener("click", function(){
+        sideMenu.classList.remove("open")
+        sideMenu.classList.add("closed")
 
-})
+    })
+}
 
-/* Set the width of the side navigation to 0 */
-navOpen.addEventListener("click", function(){
-  sideMenu.classList.remove("closed")
-  sideMenu.classList.add("open")
-})
+if (navOpen) {
+    navOpen.addEventListener("click", function(){
+        sideMenu.classList.remove("closed")
+        sideMenu.classList.add("open")
+    })
+}
 
 if (formHeaderUpload) {
   formHeaderUpload.addEventListener("change", function () {
@@ -47,7 +52,7 @@ if (joinButton) {
       <section style="text-align:left">
         <hr>
         <h5>WORKSHOP CODING</h5>
-        <h6>DATUM EN TIJD</h6>
+        <h6>DATE AND TIME</h6>
         <p>zo, 22 jan. 2017, 16:00 CET</p>
         <a style="color:#EE5250" href="#">Add to calendar</a>
         <hr>
@@ -73,7 +78,7 @@ if (!joinButton) {
 
     var msg = `
     <div>
-      <img style="height: 13em; width:100%" src="/images/coding.jpg"/>
+      <img style="height: 13em; width:100%" src="images/coding.jpg"/>
       <p>Inspired by all these workshops? Why not create your own?</p>
     </div>`
 
@@ -84,4 +89,17 @@ if (!joinButton) {
         alertify.success("A event has been created")
       })
   }, 10000)
+}
+
+
+if(window.location.pathname == "/join.html" || window.location.pathname == "/zokuinspire/join.html"){
+
+    function showLocation() {
+        var msg = `
+        <div>
+          <img style="width:100%" src="images/map.jpg"/>
+        </div>`
+        alertify.alert(msg, function() {}, 'popup1');
+
+    }
 }
