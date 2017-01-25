@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/feenstl003/zoku#readme",
   "dependencies": {
-    "budo": "^9.4.5"
+    "budo": "^9.4.5",
+    "qrcode-reader": "^0.2.2"
   }
 }

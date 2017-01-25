@@ -37,63 +37,73 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/skeleton.css">
     <link rel="stylesheet" href="css/alertify.css">
-    <link rel="stylesheet" href="css/zoku.css">
+    <link rel="stylesheet" href="css/big-screen.css">
 
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 
-    <script src="https://rawgithub.com/fabien-d/alertify.js/0.3.10/src/alertify.js"></script>
+    <!-- QR -->
+    <script src="js/qr/qrcode.js"></script>
 </head>
 
 <body>
 
     	<div class="header row">
             <div class="twelve columns menu">
-
-              <!-- Hidden navmenu -->
-              <div class="">
-                <div id="mySidenav" class="sidenav closed">
-                  <a href="javascript:void(0)" class="closebtn">&times;</a>
-                  <a href="index.html"><span><i class="fa fa-home"></i> HOME</span></a>
-                  <a href="#"><span><i class="fa fa-search"></i> FIND MY RESERVATIONS</span></a>
-                  <a href="workshops.html"><span><i class="fa fa-star-o"></i> ZOKU INSPIRE</span></a>
-    			  <a href="profile.html"><span><i class="fa fa-user"></i> PROFILE</span></a>
-                  <a href="#"><span><i class="fa fa-question"></i> FAQ</span></a>
-                  <a href="#"><span><i class="fa fa-envelope-o"></i> CONTACT US</span></a>
-    			  <hr>
-    			  <a> Verwijderen later</a>
-                  <a href="big-screen.html"><span><i class="fa fa-expand"></i> LINK TO BIGGER SCREEN</span></a>
-                  <a href="visitors.html"><span><i class="fa fa-expand"></i> VISITORS</span></a>
-                </div>
-
-                <span class="openbtn"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></span>
-              </div>
-
                 <!-- Logo -->
                 <div class="logo"><img src="images/logo-white.svg" alt="Zoku"></div>
 
             </div>
         </div>
 
+        <div class="hero default"><!-- image comes from style --></div>
+
 
         <div class="body container">
+            <h4>Enter the fields below to join</h4>
             <div class="row">
-                <div class="one-half column" style="margin-top: 10%">
-                    <h4 style="text-transform: uppercase;">How to join</h4>
-                    <p>Zoku has a special place where you can join this workshop. You will meet & greet all the people who will attend this workshop. This wil also be the place to get more information about this workshop.</p>
-                    <ol>
-                        <li>Go to the digital screen in the Living Room at Zoku. <a id="map" style="width:5em; color:#bd5250" onclick="showLocation()">Where?</a></li>
-                        <li>Tap on the workshop you like the most and click to <strong>join</strong>.</li>
-                        <li>Last but not least, think about your talents. Maybe someday others can <strong>join</strong> you in a workshop you create yourself.</li>
-                    </ol>
-                    <p>Don't feel like interacting with others today? You can also join this workshop in the app</p>
-                    <a href="#" id="join-button" class="button" style="margin-top: 20%;">Join this workshop</a>
+                <div class="six columns">
+
+                    <form class="workshop-form">
+                      <div class="row">
+                        <div class="twelve columns">
+
+                          <label for="user-firstname">First name</label>
+                          <input type="text" name="user-firstname" id="user-firstname" placeholder="John" required/>
+
+                          <label for="user-surname">Last name</label>
+                          <input type="text" name="user-surname" id="user-surname" placeholder="Doe" required/>
+
+                          <input type="submit" id="joinButton" class="button" value="Join"/>
+
+                        </div>
+                      </div>
+                    </form>
+
+                </div>
+                <div class="six columns meta" style="text-align:center">
+                    <h6 style="text-transform: uppercase;">Or continue on your phone</h6>
+                    <div id="qrcode"></div>
                 </div>
             </div>
         </div>
 
+        <script type="text/javascript">
+    		var qrcode = new QRCode(document.getElementById("qrcode"), {
+    			width: 200,
+    			height: 200
+    		});
+
+    		function makeCode() {
+    			var elText = "www.livezoku.com";
+
+    			qrcode.makeCode(elText);
+    		}
+
+    		makeCode();
+    	</script>
         <script src="js/alertify.js"></script>
-        <script src="https://rawgithub.com/fabien-d/alertify.js/0.3.10/src/alertify.js"></script>
-        <script src="js/zoku.js"></script>
+        <script src="js/big-screen.js"></script>
     </body>
 
 </html>

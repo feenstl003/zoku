@@ -41,21 +41,42 @@
 
 	<!-- Custom css -->
 	<link rel="stylesheet" href="css/big-screen.css">
+
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
-    <!-- Content -->
-	<div class="container">
+
+    	<div class="header row">
+            <div class="twelve columns menu">
+                <!-- Logo -->
+                <div class="logo"><img src="images/logo-white.svg" alt="Zoku"></div>
+
+            </div>
+        </div>
+
+        <div class="hero default"><!-- image comes from style --></div>
+
+
+        <div class="body container">
+			<h4 class="name"></h4>
 		<div class="row">
-			<div id="userlistContainer" class="twelve columns" style="margin-top: 23%">
-                <!-- Content generated via javascript in js/users.js -->
+			<div class="six columns col_left">
+				<div class="circle_imgL">
+					<img class="avatar"/>
+				</div>
+				<p class="email"></p>
+				<p class="phone"></p>
 			</div>
+			<div class="six columns col_right"></div>
 		</div>
 	</div>
 
 
-			<script src="js/visitorsXL.js"></script>
-			<script src="js/zoku.js"></script>
+			<script src="js/visitor.js"></script>
+			<!-- <script src="js/zoku.js"></script> -->
 </body>
 
 </html>

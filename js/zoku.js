@@ -92,7 +92,7 @@ if (!joinButton) {
 }
 
 
-if(window.location.pathname == "/join.html" || window.location.pathname == "/zokuinspire/join.html"){
+if(location.pathname == "/join.html" || location.pathname == "/zokuinspire/join.html"){
 
     function showLocation() {
         var msg = `

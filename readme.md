@@ -8,7 +8,7 @@ To run a live server first
     * ifconfig (this command will give you a list of info)
     * look for your ip. inet xxx.xxx.x.xx netmask (the xxx.xxx.x.xx)
 
-  3. Then in the terminal run: " npm start "
+  3. Then in the terminal run: " npm start " or "npm run budo"
     * it will say
       "Serving HTTP on 0.0.0.0 port 8000 ..."
 

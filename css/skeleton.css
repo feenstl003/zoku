@@ -356,7 +356,7 @@ a:hover {
 body > div.container > div > div > div:nth-child(1) {
     border-top: none;
 }
-.workshop a {
+.workshop a, .event-container a {
     padding: 8px 8px 8px 0px;
     text-decoration: none;
     text-align: center;

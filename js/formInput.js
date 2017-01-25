@@ -22,12 +22,12 @@ if (submit) {
             localStorage.setItem(formInput[i].id , formInput[i].value);
         }
 
-        window.location= "profile.html"
+        location= "profile.html"
     })
 }
 
 
-if (localStorage.length > 0 && (window.location.pathname == "/profile.html" || window.location.pathname == "/zokuinspire/profile.html")) {
+if (localStorage.length > 0 && (location.pathname == "/profile.html" || location.pathname == "/zokuinspire/profile.html")) {
     // console.log(contentPlaceholder);
         addElement(localStorage)
 
