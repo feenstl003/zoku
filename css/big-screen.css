@@ -32,6 +32,10 @@ button {
     font-family: "varela_roundregular", "Open Sans", sans-serif;
     text-transform: uppercase;
 }
+
+.big-font{
+    font-size: 1.4em
+}
 /*-------------------------*/
 
 
@@ -182,7 +186,7 @@ body.screensaver *{
 
 /*---------Workshops----------*/
 div.body.container{
-    margin-top: 6%
+    margin-top: 3em;
 }
 div.body.container h4{
     margin-bottom: 6%;
@@ -213,7 +217,7 @@ div.body.container h4{
     width:200px;
     height:200px;
     margin: 5em auto;
-    margin-bottom:1em
+    margin-top:1em;
 }
 
 .hosts_container{
@@ -281,3 +285,15 @@ a.button{
     padding: 0
 }
 /*-----------------------------*/
+
+#back{
+    /*border-radius:100px 0px 0px 100px;*/
+    /*background-color: #ee5250;*/
+    color: #999;
+    font-size: 5em;
+    padding: 0em 0.4em;
+    position: fixed;
+    left: 0;
+    top:50%;
+    cursor: pointer;
+}

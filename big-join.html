@@ -57,7 +57,7 @@
         </div>
 
         <div class="hero default"><!-- image comes from style --></div>
-
+        <a type="button" name="back" id="back"><i class="fa fa-angle-left"></i></a>
 
         <div class="body container">
             <h4>Enter the fields below to join</h4>
@@ -95,13 +95,22 @@
     		});
 
     		function makeCode() {
-    			var elText = "www.livezoku.com";
+    			var elText = "http://www.lottefeenstra.nl/zokuinspire/workshop.html";
 
     			qrcode.makeCode(elText);
     		}
 
     		makeCode();
     	</script>
+        <script>
+        var backButton = document.getElementById('back')
+
+        if(backButton) {
+            back.addEventListener("click", ()=>{
+                history.back()
+            })
+        }
+        </script>
         <script src="js/alertify.js"></script>
         <script src="js/big-screen.js"></script>
     </body>

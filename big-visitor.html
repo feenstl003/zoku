@@ -58,6 +58,7 @@
         </div>
 
         <div class="hero default"><!-- image comes from style --></div>
+		<a type="button" name="back" id="back"><i class="fa fa-angle-left"></i></a>
 
 
         <div class="body container">
@@ -74,6 +75,15 @@
 		</div>
 	</div>
 
+	<script>
+	var backButton = document.getElementById('back')
+
+	if(backButton) {
+		back.addEventListener("click", ()=>{
+			history.back()
+		})
+	}
+	</script>
 
 			<script src="js/visitor.js"></script>
 			<!-- <script src="js/zoku.js"></script> -->

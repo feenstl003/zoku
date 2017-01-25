@@ -55,7 +55,7 @@
         </div>
 
         <div class="hero workshop"><!-- image comes from style --></div>
-
+        <a type="button" name="back" id="back"><i class="fa fa-angle-left"></i></a>
 
         <div class="body container">
         <div class="row">
@@ -125,7 +125,15 @@
         </div>
     </div>
 
+    <script>
+    var backButton = document.getElementById('back')
 
+    if(backButton) {
+        back.addEventListener("click", ()=>{
+            history.back()
+        })
+    }
+    </script>
     <!-- <script src="js/qr.js"></script> -->
     <!-- <script src="js/screensaver.js"></script> -->
 </body>

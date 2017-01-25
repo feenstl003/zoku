@@ -55,10 +55,12 @@
 
     <div class="hero"><!-- image comes from style --></div>
 
+	<a type="button" name="back" id="back"><i class="fa fa-angle-left"></i></a>
+
 	<div class="body container">
         <h4>Workshop Coding</h4>
 		<div class="row">
-			<div class="eight columns">
+			<div class="big-font eight columns">
 				<p>When the web was new, design and structure were all mixed up together. Eventually we realised this was very messy, so we invented CSS and separated design from HTML. Everyone felt much better after this, and went and had a cup of tea.</p>
 				<p>But while everyone was drinking tea (and not really paying attention), the line between design and structure began to get messy again. Things like the before/after pseudo-selectors made it possible for CSS to directly change content, and features
 					like FlexBox push the concept of separation to breaking point. Conversely, CSS is being used as a development tool for visualising semantic information like role and state, when added to an interface using ARIA.</p>
@@ -103,7 +105,15 @@
 	</div>
 
 
+	<script>
+	var backButton = document.getElementById('back')
 
+	if(backButton) {
+		back.addEventListener("click", ()=>{
+			history.back()
+		})
+	}
+	</script>
 
 	<!-- <script src="js/qr.js"></script> -->
 	<!-- <script src="js/screensaver.js"></script> -->
