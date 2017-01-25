@@ -39,6 +39,11 @@ button {
 button {
     font-weight: 100;
     font-size: .9em;
+    width: auto;
+}
+button.ok{
+    background-color: #ee5250 !important;
+    color: white !important;
 }
 /*-------------------------*/
 
@@ -229,7 +234,7 @@ div.body.container h4{
     width: 100%
 }
 .hosts_container p{
-    color: #bd5250
+    color: #ee5250
 }
 /*-----------------------------*/
 
@@ -270,7 +275,7 @@ div.body.container h4{
     width: 100%
 }
 .hosts_container p{
-    color: #bd5250
+    color: #ee5250
 }
 a.button{
     padding: 0

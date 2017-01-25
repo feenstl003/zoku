@@ -4,6 +4,13 @@ var sideMenu = document.getElementById("mySidenav")
 var main = document.querySelector("div.body")
 var joinButton = document.getElementById('join-button')
 var formHeaderUpload = document.querySelector(".header-img.placeholder #workshop-header")
+var backButton = document.getElementById('back')
+
+if(backButton) {
+    back.addEventListener("click", ()=>{
+        history.back()
+    })
+}
 
 /* Set the width of the side navigation to 0 */
 if (navClose) {
