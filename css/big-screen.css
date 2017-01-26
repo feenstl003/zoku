@@ -205,10 +205,11 @@ div.body.container h4{
     margin: 0;
 }
 .hero.default{
-    background: url(http://livezoku.com/wp-content/uploads/2015/02/spaces-overview-mobile-banner.jpg);
+    background: url(img/background-2.jpg);
 }
 .hero.workshop{
-    background: url(http://livezoku.com/wp-content/uploads/2016/03/walts-workshop-small.jpg);
+    background: url(img/background-2.jpg);
+    height: 0
 }
 .hero img{
     width: 100%
